@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "name": "Smartphone XYZ",
+        "image": "/img/product/product9.jpg",
+        "category": "Electronics",
+        "price": "120000",
+        "offer": 15,
+        "discountedPrice": "102000"
+    },
+    {
+        "id": 2,
+        "name": "Wireless Headphones",
+        "image": "/img/product/product1.jpg",
+        "category": "Electronics",
+        "price": "55000",
+        "offer": 10,
+        "discountedPrice": "49500"
+    },
+    {
+        "id": 3,
+        "name": "Pet Bed",
+        "image": "/img/product/product51.jpg",
+        "category": "Pets Item",
+        "price": "80000",
+        "offer": 12,
+        "discountedPrice": "70400"
+    },
+    {
+        "id": 4,
+        "name": "Kitchen Blender",
+        "image": "/img/product/product33.jpg",
+        "category": "Kitchen Item",
+        "price": "60000",
+        "offer": 8,
+        "discountedPrice": "55200"
+    },
+    {
+        "id": 5,
+        "name": "Fashionable Sunglasses",
+        "image": "/img/product/product103.jpg",
+        "category": "Cloths",
+        "price": "45000",
+        "offer": 10,
+        "discountedPrice": "40500"
+    }
+
+]

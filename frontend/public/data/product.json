@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "name": "Smartphone XYZ",
+        "image": "/img/product/product9.jpg",
+        "category": "Electronics",
+        "price": "120000",
+        "offer": 15,
+        "discountedPrice": "102000"
+    },
+    {
+        "id": 2,
+        "name": "Wireless Headphones",
+        "image": "/img/product/product1.jpg",
+        "category": "Electronics",
+        "price": "55000",
+        "offer": 10,
+        "discountedPrice": "49500"
+    },
+    {
+        "id": 3,
+        "name": "Pet Bed",
+        "image": "/img/product/product51.jpg",
+        "category": "Pets Item",
+        "price": "80000",
+        "offer": 12,
+        "discountedPrice": "70400"
+    },
+    {
+        "id": 4,
+        "name": "Kitchen Blender",
+        "image": "/img/product/product33.jpg",
+        "category": "Kitchen Item",
+        "price": "60000",
+        "offer": 8,
+        "discountedPrice": "55200"
+    },
+    {
+        "id": 5,
+        "name": "Fashionable Sunglasses",
+        "image": "/img/product/product103.jpg",
+        "category": "Cloths",
+        "price": "45000",
+        "offer": 10,
+        "discountedPrice": "40500"
+    },
+    {
+        "id": 6,
+        "name": "Gaming Laptop",
+        "image": "/img/product/product63.jpg",
+        "category": "Electronics",
+        "price": "180000",
+        "offer": 20,
+        "discountedPrice": "144000"
+    },
+    {
+        "id": 7,
+        "name": "Cat Tree",
+        "image": "/img/product/product19.jpg",
+        "category": "Pets Item",
+        "price": "90000",
+        "offer": 15,
+        "discountedPrice": "76500"
+    },
+    {
+        "id": 8,
+        "name": "Stainless Steel Cookware Set",
+        "image": "/img/product/product45.jpg",
+        "category": "Kitchen Item",
+        "price": "120000",
+        "offer": 18,
+        "discountedPrice": "98400"
+    },
+    {
+        "id": 9,
+        "name": "Fitness Tracker",
+        "image": "/img/product/product87.jpg",
+        "category": "Electronics",
+        "price": "70000",
+        "offer": 13,
+        "discountedPrice": "60900"
+    },
+    {
+        "id": 10,
+        "name": "Dog Grooming Kit",
+        "image": "/img/product/product17.jpg",
+        "category": "Pets Item",
+        "price": "50000",
+        "offer": 10,
+        "discountedPrice": "45000"
+    },
+    {
+        "id": 11,
+        "name": "Coffee Maker",
+        "image": "/img/product/product64.jpg",
+        "category": "Kitchen Item",
+        "price": "90000",
+        "offer": 15,
+        "discountedPrice": "76500"
+    },
+    {
+        "id": 12,
+        "name": "Men's Casual Shirt",
+        "image": "/img/product/product26.jpg",
+        "category": "Cloths",
+        "price": "60000",
+        "offer": 12,
+        "discountedPrice": "52800"
+    }
+]

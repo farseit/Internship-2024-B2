@@ -1,0 +1,221 @@
+[
+    {
+      "label": "Gadgets",
+      "href": "#",
+      "subNav": [
+        {
+          "label": "Smart Devices",
+          "href": "#",
+          "subSubNav": [
+            {"label": "Smartphones", "href": "#"},
+            {"label": "Smartwatches", "href": "#"},
+            {"label": "Smart Home", "href": "#"}
+          ]
+        },
+        {"label": "Audio Gadgets", "href": "#", "subSubNav": [
+          {"label": "Headphones", "href": "#"},
+          {"label": "Bluetooth Speakers", "href": "#"},
+          {"label": "Soundbars", "href": "#"},
+          {"label": "Earbuds", "href": "#"},
+          {"label": "Gaming Headsets", "href": "#"},
+          {"label": "Voice Assistants", "href": "#"},
+          {"label": "Record Players", "href": "#"}
+        ]},
+        {"label": "Wearable Tech", "href": "#", "subSubNav": [
+          {"label": "Fitness Trackers", "href": "#"},
+          {"label": "Smart Glasses", "href": "#"},
+          {"label": "VR Headsets", "href": "#"},
+          {"label": "Health Monitoring", "href": "#"},
+          {"label": "Smart Clothing", "href": "#"},
+          {"label": "Wearable Cameras", "href": "#"},
+          {"label": "Sleep Trackers", "href": "#"}
+        ]},
+        {"label": "Portable Gadgets", "href": "#"},
+        {"label": "Car Tech", "href": "#"},
+        {"label": "Gadget Accessories", "href": "#"}
+      ]
+    },
+    {
+      "label": "Pets Item",
+      "href": "#",
+      "subNav": [
+        {"label": "Pet Food", "href": "#", "subSubNav": [
+          {"label": "Dry Food", "href": "#"},
+          {"label": "Canned Food", "href": "#"},
+          {"label": "Treats", "href": "#"},
+          {"label": "Special Diets", "href": "#"},
+          {"label": "Raw Food", "href": "#"},
+          {"label": "Grain-Free", "href": "#"},
+          {"label": "Organic Options", "href": "#"}
+        ]},
+        {"label": "Pet Toys", "href": "#", "subSubNav": [
+          {"label": "Chew Toys", "href": "#"},
+          {"label": "Interactive Toys", "href": "#"},
+          {"label": "Plush Toys", "href": "#"},
+          {"label": "Fetch Toys", "href": "#"},
+          {"label": "Catnip Toys", "href": "#"},
+          {"label": "Squeaky Toys", "href": "#"},
+          {"label": "Puzzle Toys", "href": "#"}
+        ]},
+        {"label": "Pet Accessories", "href": "#", "subSubNav": [
+          {"label": "Collars", "href": "#"},
+          {"label": "Leashes", "href": "#"},
+          {"label": "Bowls", "href": "#"},
+          {"label": "Bedding", "href": "#"},
+          {"label": "Carriers", "href": "#"},
+          {"label": "Grooming Tools", "href": "#"},
+          {"label": "ID Tags", "href": "#"}
+        ]},
+        {"label": "Health and Care", "href": "#"},
+        {"label": "Pet Tech", "href": "#"},
+        {"label": "Training Aids", "href": "#"}
+      ]
+    },
+    {
+      "label": "Kitchen Item",
+      "href": "#",
+      "subNav": [
+        {"label": "Cookware", "href": "#", "subSubNav": [
+          {"label": "Pots and Pans", "href": "#"},
+          {"label": "Bakeware", "href": "#"},
+          {"label": "Cooking Utensils", "href": "#"},
+          {"label": "Grilling Tools", "href": "#"},
+          {"label": "Ovenware", "href": "#"},
+          {"label": "Woks", "href": "#"},
+          {"label": "Casserole Dishes", "href": "#"}
+        ]},
+        {"label": "Kitchen Appliances", "href": "#", "subSubNav": [
+          {"label": "Blenders", "href": "#"},
+          {"label": "Coffee Makers", "href": "#"},
+          {"label": "Toasters", "href": "#"},
+          {"label": "Food Processors", "href": "#"},
+          {"label": "Microwaves", "href": "#"},
+          {"label": "Juicers", "href": "#"},
+          {"label": "Slow Cookers", "href": "#"}
+        ]},
+        {"label": "Utensils", "href": "#", "subSubNav": [
+          {"label": "Knives", "href": "#"},
+          {"label": "Spoons", "href": "#"},
+          {"label": "Spatulas", "href": "#"},
+          {"label": "Tongs", "href": "#"},
+          {"label": "Peelers", "href": "#"},
+          {"label": "Whisks", "href": "#"},
+          {"label": "Measuring Cups", "href": "#"}
+        ]},
+        {"label": "Dinnerware", "href": "#"},
+        {"label": "Small Appliances", "href": "#"},
+        {"label": "Storage and Organization", "href": "#"}
+      ]
+    },
+    {
+      "label": "Electronics",
+      "href": "#",
+      "subNav": [
+        {"label": "Laptops", "href": "#", "subSubNav": [
+          {"label": "Gaming Laptops", "href": "#"},
+          {"label": "Ultrabooks", "href": "#"},
+          {"label": "Convertible Laptops", "href": "#"},
+          {"label": "Business Laptops", "href": "#"},
+          {"label": "Student Laptops", "href": "#"},
+          {"label": "Laptop Accessories", "href": "#"},
+          {"label": "Gaming Accessories", "href": "#"}
+        ]},
+        {"label": "Cameras", "href": "#", "subSubNav": [
+          {"label": "DSLR Cameras", "href": "#"},
+          {"label": "Mirrorless Cameras", "href": "#"},
+          {"label": "Action Cameras", "href": "#"},
+          {"label": "Digital Compact Cameras", "href": "#"},
+          {"label": "Camera Lenses", "href": "#"},
+          {"label": "Camera Accessories", "href": "#"},
+          {"label": "Camera Bags", "href": "#"}
+        ]},
+        {"label": "Headphones", "href": "#", "subSubNav": [
+          {"label": "Over-ear Headphones", "href": "#"},
+          {"label": "In-ear Headphones", "href": "#"},
+          {"label": "Noise-canceling Headphones", "href": "#"},
+          {"label": "Wireless Headphones", "href": "#"},
+          {"label": "Sports Headphones", "href": "#"},
+          {"label": "DJ Headphones", "href": "#"},
+          {"label": "Studio Monitors", "href": "#"}
+        ]},
+        {"label": "Smart Home Devices", "href": "#"},
+        {"label": "Audio Systems", "href": "#"},
+        {"label": "Gaming Consoles", "href": "#"}
+      ]
+    },
+    {
+      "label": "Phone Accessories",
+      "href": "#",
+      "subNav": [
+        {"label": "Phone Cases", "href": "#", "subSubNav": [
+          {"label": "Protective Cases", "href": "#"},
+          {"label": "Leather Cases", "href": "#"},
+          {"label": "Slim Cases", "href": "#"},
+          {"label": "Custom Cases", "href": "#"},
+          {"label": "Designer Cases", "href": "#"},
+          {"label": "Waterproof Cases", "href": "#"},
+          {"label": "Battery Cases", "href": "#"}
+        ]},
+        {"label": "Chargers", "href": "#", "subSubNav": [
+          {"label": "Wireless Chargers", "href": "#"},
+          {"label": "Fast Chargers", "href": "#"},
+          {"label": "Car Chargers", "href": "#"},
+          {"label": "Wall Chargers", "href": "#"},
+          {"label": "Portable Chargers", "href": "#"},
+          {"label": "Multi-port Chargers", "href": "#"},
+          {"label": "Solar Chargers", "href": "#"}
+        ]},
+        {"label": "Screen Protectors", "href": "#", "subSubNav": [
+          {"label": "Tempered Glass", "href": "#"},
+          {"label": "Privacy Filters", "href": "#"},
+          {"label": "Anti-Glare Protectors", "href": "#"},
+          {"label": "Full Coverage Protectors", "href": "#"},
+          {"label": "Matte Protectors", "href": "#"},
+          {"label": "Blue Light Blocking", "href": "#"},
+          {"label": "Flexible Film Protectors", "href": "#"}
+        ]},
+        {"label": "Power Banks", "href": "#"},
+        {"label": "Cables and Adapters", "href": "#"},
+        {"label": "PopSockets and Grips", "href": "#"},
+        {"label": "Car Mounts", "href": "#"}
+      ]
+    },
+    {
+      "label": "Cloth",
+      "href": "#",
+      "subNav": [
+        {"label": "Men's Clothing", "href": "#", "subSubNav": [
+          {"label": "T-Shirts", "href": "#"},
+          {"label": "Jeans", "href": "#"},
+          {"label": "Suits", "href": "#"},
+          {"label": "Activewear", "href": "#"},
+          {"label": "Jackets", "href": "#"},
+          {"label": "Underwear", "href": "#"},
+          {"label": "Socks", "href": "#"}
+        ]},
+        {"label": "Women's Clothing", "href": "#", "subSubNav": [
+          {"label": "Dresses", "href": "#"},
+          {"label": "Tops", "href": "#"},
+          {"label": "Activewear", "href": "#"},
+          {"label": "Jackets", "href": "#"},
+          {"label": "Skirts", "href": "#"},
+          {"label": "Lingerie", "href": "#"},
+          {"label": "Leggings", "href": "#"}
+        ]},
+        {"label": "Accessories", "href": "#", "subSubNav": [
+          {"label": "Hats", "href": "#"},
+          {"label": "Scarves", "href": "#"},
+          {"label": "Belts", "href": "#"},
+          {"label": "Watches", "href": "#"},
+          {"label": "Sunglasses", "href": "#"},
+          {"label": "Gloves", "href": "#"},
+          {"label": "Handbags", "href": "#"}
+        ]},
+        {"label": "Shoes", "href": "#"},
+        {"label": "Jewelry", "href": "#"},
+        {"label": "Suits and Blazers", "href": "#"},
+        {"label": "Swimwear", "href": "#"}
+      ]
+    }
+  ]
+  
