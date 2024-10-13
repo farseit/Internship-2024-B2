@@ -41,11 +41,11 @@ const ProductCard = ({ product }) => {
             </p>
           </div>
           <div className="flex justify-center gap-1.5">
-            <button className="rounded-md bg-[#192a56] px-1 py-1 basis-1/2 text-[10px] capitalize text-white md:px-2 md:text-xs">
+            <button className="rounded-md bg-[#192a56]/90 hover:bg-[#192a56] px-1 py-1 basis-1/2 text-[10px] capitalize text-white md:px-2 md:text-xs">
               Buy Now
             </button>
             <button
-              className="rounded-md border border-[#192a56] basis-1/2 px-1 py-1 text-[10px] capitalize text-[#192a56] md:px-2 md:text-xs"
+              className="rounded-md border border-[#192a16] hover:bg-[#192a56]/90 hover:text-white basis-1/2 px-1 py-1 text-[10px] capitalize text-[#192a56] md:px-2 md:text-xs"
               onClick={() => handleAddToCart(product.id)}
             >
               Add to Cart
