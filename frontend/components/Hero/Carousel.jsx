@@ -30,7 +30,7 @@ const Carousel = ({ banners }) => {
   };
 
   return (
-    <div className="relative w-full h-[500px]">
+    <div className="relative w-full sm:h-[500px] h-[200px]">
       <div
         className="absolute inset-0 flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
