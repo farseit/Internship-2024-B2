@@ -33,15 +33,15 @@ const Hero = () => {
           <ImageSlider banners={banners} />
         </div>
       </div>
-      <div className="lg:flex gap-[2.1rem] flex-row justify-center items-center min-h-[200px]">
+      <div className="lg:flex flex-row justify-between  min-h-[200px]">
         {rowImage.map((item, index) => (
-          <div key={index} className="flex justify-center items-center p-4">
+          <div key={index} className="flex justify-center items-center">
             <Image
               src={item.src}
               alt={item.alt}
               width={400}
               height={400}
-              className="lg:max-w-[400px] w-full max-h-[170px] lg:object-cover min-h-[200px] md:min-h-[400px]"
+              className="lg:min-w-[380px] w-full max-h-[170px] lg:object-cover min-h-[200px] md:min-h-[400px] lg:min-h-[200px]"
             />
           </div>
         ))}
