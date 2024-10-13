@@ -3,13 +3,16 @@ import navItems from "../../public/data/navbar";
 
 const Navbar = () => {
   return (
-    <nav className="bg-[#f5f6fa] drop-shadow-md w-full flex justify-center">
-      <ul className="flex justify-center gap-1">
+    <nav className="bg-[#f5f6fa] drop-shadow-md w-full  flex lg:justify-center">
+      <ul className="flex flex-col lg:flex-row justify-center gap-1">
         {navItems.map((navItem, index) => (
-          <span key={index} className="relative group/nav">
+          <span
+            key={index}
+            className="relative group/nav px-4 py-1 hover:bg-[#d3dae8]"
+          >
             <Link
               href={navItem.href}
-              className="block py-3 text-sm font-semibold uppercase duration-300 md:text-sm md:px-1 xl:px-2 text-[#192A56] hover:text-[#130b2efa]"
+              className="block text-sm font-semibold uppercase duration-300 md:text-sm md:px-1 xl:px-2 text-[#192A56] hover:text-[#130b2efa]"
             >
               {navItem.label}
             </Link>

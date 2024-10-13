@@ -58,9 +58,6 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="col-span-10 lg:col-span-3 lg:hidden">
-        <Categories />
-      </div>
     </section>
   );
 };
