@@ -3,8 +3,8 @@ import navItems from "../../public/data/navbar";
 
 const Navbar = () => {
   return (
-    <nav className="bg-[#f5f6fa] drop-shadow-md w-full  flex lg:justify-center">
-      <ul className="flex flex-col lg:flex-row justify-center gap-1">
+    <nav className="bg-[#f5f6fa] hidden drop-shadow-md w-full py-4  lg:flex lg:justify-center">
+      <ul className="hidden lg:flex justify-center gap-1">
         {navItems.map((navItem, index) => (
           <span
             key={index}

@@ -42,7 +42,7 @@ const Categories = () => {
               <FontAwesomeIcon icon={faAngleRight} />
             </span>
             {/* sub category */}
-            <div className="hidden group-hover/category:flex w-full absolute group-hover/category:flex-col left-full z-20  animate-fadeInUp group-hover/category:bg-white shadow-md  ">
+            <div className="hidden group-hover/category:flex w-full absolute group-hover/category:flex-col left-1/2 rounded-md lg:left-full z-20  animate-fadeInUp group-hover/category:bg-white shadow-md  ">
               {category.subNav.map((subCat, idx) => (
                 <Link
                   key={idx}
@@ -58,7 +58,7 @@ const Categories = () => {
                     )}
                   </div>
                   {/* sub Sub Category */}
-                  <div className="hidden duration-300 group-hover/subcategory:flex w-full absolute group-hover/subcategory:flex-col left-full z-30 top-0.5  group-hover/subcategory:bg-white shadow-md animate-fadeInUp ">
+                  <div className="hidden duration-300 group-hover/subcategory:flex w-2/3 lg:w-full absolute group-hover/subcategory:flex-col left-1/2 rounded-md lg:left-full z-30 top-0.5  group-hover/subcategory:bg-white shadow-md animate-fadeInUp ">
                     {subCat.subSubNav?.map((subSubCat, idx) => (
                       <Link
                         key={idx}

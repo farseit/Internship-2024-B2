@@ -1,3 +1,5 @@
+"use client";
+import Categories from "../Hero/Categories";
 import HeaderContact from "./HeaderContact";
 import HeaderContent from "./HeaderContent";
 import Navbar from "./Navbar";
