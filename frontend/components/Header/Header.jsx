@@ -1,16 +1,18 @@
 import HeaderContact from "./HeaderContact";
 import HeaderContent from "./HeaderContent";
-import Navbar from "./Navbar";
+import HeaderNavbar from "./HeaderNavbar";
+import Navbar from "../Hero/Categories";
 
 const Header = () => {
   return (
     <>
-      <div className="flex justify-center bg-secondary">
+      <div className="flex justify-center bg-white">
         <HeaderContact />
       </div>
       <header className="sticky top-0 z-50 ">
         <HeaderContent />
-        <Navbar />
+        {/* <Navbar /> */}
+        <HeaderNavbar />
       </header>
     </>
   );

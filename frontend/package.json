@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.5.1",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -20,6 +21,7 @@
     "@mui/material": "^5.15.19",
     "@mui/material-nextjs": "^5.15.11",
     "@reduxjs/toolkit": "^2.2.6",
+    "antd": "^5.21.3",
     "axios": "^1.7.2",
     "firebase": "^10.12.3",
     "js-cookie": "^3.0.5",

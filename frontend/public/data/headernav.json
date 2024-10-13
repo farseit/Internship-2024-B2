@@ -1,0 +1,31 @@
+[
+    {
+     "label":"Home",
+     "href":"/"
+    },
+    {
+        "label":"Flash Sale",
+        "href":"/"
+    },
+    {
+        "label":"Blogs",
+        "href":"/"
+       },
+       {
+        "label":"All Brands",
+        "href":"/"
+       },
+       {
+        "label":"All categories",
+        "href":"/"
+       },
+       {
+        "label":"Track order",
+        "href":"/"
+       },
+       {
+        "label":"Become vendor",
+        "href":"/"
+       }
+       
+]

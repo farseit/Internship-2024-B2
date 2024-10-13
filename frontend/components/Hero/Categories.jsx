@@ -1,19 +1,30 @@
 import Link from "next/link";
 import navItems from "../../public/data/navbar";
 
-const Navbar = () => {
+const Categories = () => {
   return (
-    <nav className="bg-[#f5f6fa] drop-shadow-md w-full flex justify-center">
-      <ul className="flex justify-center gap-1">
+    <nav className="bg-white shadow-md sm:flex w-[24%] justify-start items-start rounded-md hidden">
+      <ul className="flex flex-col justify-center gap-1 py-2 px-1 w-full">
+        <div className="pl-2 flex gap-10 mb-4">
+          <span className="lg:text-lg font-semibold">Categories</span>
+          <span className="lg:text-sm lg:flex items-center hidden">
+            All Categories {" >"}
+          </span>
+        </div>
         {navItems.map((navItem, index) => (
-          <span key={index} className="relative group/nav">
+          <span
+            key={index}
+            className="relative group/nav hover:bg-[#192A56] rounded-sm my-1 transition-all duration-500 ease-in"
+          >
             <Link
               href={navItem.href}
-              className="block py-3 text-sm font-semibold uppercase duration-300 md:text-sm md:px-1 xl:px-2 text-[#192A56] hover:text-[#130b2efa]"
+              className="py-2 text-xs flex duration-500 ease-in-out md:text-sm md:px-1 xl:px-2 text-gray-600 group-hover/nav:text-white justify-between"
             >
-              {navItem.label}
+              <span>{navItem.label}</span>
+              <span>&#x25B8;</span>
             </Link>
-            <div className="absolute z-50 bg-white shadow rounded-b w-[200px] top-[90%] hidden group-hover/nav:flex flex-col animate-fadeInUp left-0">
+            {/* Submenu always on the right */}
+            <div className="absolute z-50 bg-white shadow rounded-lg w-[200px] top-[0%] left-[100%] hidden group-hover/nav:flex flex-col animate-fadeInUp">
               {navItem.subNav.map((subNavItem, subIndex) => (
                 <span
                   key={subIndex}
@@ -24,9 +35,11 @@ const Navbar = () => {
                     className="text-sm px-4 py-1 flex items-center justify-between duration-300 hover:pl-6"
                   >
                     <span>{subNavItem.label}</span>
+                    <span>&#x25B8;</span>
                   </Link>
+                  {/* Sub-submenu always on the right */}
                   {subNavItem.subSubNav && (
-                    <div className="absolute z-50 bg-white text-secondary shadow rounded-md w-[200px] top-1 left-[90%] hidden group-hover/subnav:flex flex-col animate-fadeInUp">
+                    <div className="absolute z-50 bg-white text-secondary shadow-lg rounded-md w-[200px] top-0 left-[100%] hidden group-hover/subnav:flex flex-col animate-fadeInUp">
                       {subNavItem.subSubNav.map(
                         (subSubNavItem, subSubIndex) => (
                           <span
@@ -54,4 +67,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Categories;
