@@ -1,6 +1,7 @@
 import React from "react";
 import Categories from "./Categories";
 import Image from "next/image";
+import Link from "next/link";
 import ImageSlider from "./ImageSlider";
 import Carousel from "./Carousel";
 
@@ -35,15 +36,15 @@ const Hero = () => {
       </div>
       <div className="lg:flex flex-row justify-between  min-h-[200px]">
         {rowImage.map((item, index) => (
-          <div key={index} className="flex justify-center items-center">
+          <Link href={'/'}key={index} className="flex justify-center items-center overflow-hidden">
             <Image
               src={item.src}
               alt={item.alt}
               width={400}
               height={400}
-              className="lg:min-w-[380px] w-full max-h-[170px] lg:object-cover min-h-[200px] md:min-h-[400px] lg:min-h-[200px]"
+              className="lg:min-w-[380px] w-full max-h-[170px] lg:object-cover min-h-[200px] md:min-h-[400px] lg:min-h-[200px] transition-transform duration-300 transform hover:scale-110"
             />
-          </div>
+          </Link>
         ))}
       </div>
     </section>
