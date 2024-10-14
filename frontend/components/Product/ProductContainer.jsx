@@ -10,7 +10,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const ProductContainer = () => {
   return (
     <>
-      <div className="container mx-auto mt-5">
+      <div className="container mx-auto mt-6 md:mt-12">
         <h3 className=" text-secondary text-center mb-5 uppercase text-3xl font-bold font-oswald ">
           Collection Name
         </h3>

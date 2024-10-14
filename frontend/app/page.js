@@ -3,7 +3,7 @@ import ProductContainer from "@/components/Product/ProductContainer";
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-[95%] mx-auto">
       <Hero />
       <ProductContainer />
       <ProductContainer />

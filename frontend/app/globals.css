@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* .swiper-button-prev, .swiper-button-next{
+    width: 40px !important;
+    background-color: white;
+    height: 40px !important;
+    @apply rounded-full
+} */
