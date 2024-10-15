@@ -38,7 +38,7 @@ const HeaderContent = () => {
   return (
     <section className="relative">
       <div
-        className={`${
+        className={`lg:hidden ${
           navBarOpen ? "translate-x-0" : "-translate-x-full "
         } duration-300 absolute top-full`}
       >
@@ -90,7 +90,7 @@ const HeaderContent = () => {
             <button className="text-3xl text-primary lg:hidden">
               <FontAwesomeIcon
                 icon={faMagnifyingGlass}
-                className="w-4 text-black"
+                className="w-4 text-white"
               />
             </button>
           </div>

@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HeaderContact = () => {
   return (
-    <div className="flex justify-between text-white text-xs py-1 container max-w-[57%]">
+    <div className="flex justify-between text-white text-xs py-1 container max-w-[90%] lg:max-w-[57%]">
       <div>Dhaka, Bangladesh</div>
       <div className="flex items-center">
         <FontAwesomeIcon icon={faPhone} className="w-3 mr-2" />

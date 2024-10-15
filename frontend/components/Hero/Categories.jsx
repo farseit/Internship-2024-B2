@@ -16,7 +16,7 @@ import categories from "../../public/data/navbar.json";
 import Link from "next/link";
 const Categories = () => {
   return (
-    <div className="bg-white p-4 shadow-md rounded-lg">
+    <div className="bg-white p-4 rounded-lg">
       <h2 className="flex items-center gap-3">
         <span className="font-semibold">Categories</span>{" "}
         <span className="text-sm font-medium">All Categories {">"}</span>
@@ -27,30 +27,35 @@ const Categories = () => {
           <Link
             href={category.href}
             key={idx}
-            className="group/category flex gap-4 justify-between  hover:bg-[#d3dae8] px-2 py-1  "
+            className="group/category flex gap-4 justify-between rounded-md  hover:bg-[#d3dae8] px-4 py-1  "
           >
             <div className="flex items-center gap-2">
-              {/* <Image
+              <Image
                 src={category.icon}
                 alt={category.label}
                 height={20}
                 width={20}
-              /> */}
-              <span className="font-semibold">{category.label}</span>
+                className="h-[20px] w-[20px]"
+              />
+              <span className="font-semibold group-hover/category:translate-x-2 duration-200">
+                {category.label}
+              </span>
             </div>
             <span className="group-hover/category:rotate-90 duration-300">
               <FontAwesomeIcon icon={faAngleRight} />
             </span>
             {/* sub category */}
-            <div className="hidden group-hover/category:flex w-full absolute group-hover/category:flex-col left-1/2 rounded-md lg:left-full z-20  animate-fadeInUp group-hover/category:bg-white shadow-md  ">
+            <div className="hidden drop-shadow-lg group-hover/category:flex w-full absolute group-hover/category:flex-col left-1/2 rounded-md lg:left-full z-20  animate-fadeInUp group-hover/category:bg-white shadow-lg  ">
               {category.subNav.map((subCat, idx) => (
                 <Link
                   key={idx}
                   href={subCat.href}
-                  className="group/subcategory relative hover:bg-[#d3dae8] px-3 py-1 "
+                  className="group/subcategory relative hover:bg-[#d3dae8] rounded-md px-4 py-1 "
                 >
                   <div className=" flex justify-between hover:font-semibold">
-                    <span>{subCat.label}</span>
+                    <span className="text-sm group-hover/subcategory:translate-x-2 duration-200">
+                      {subCat.label}
+                    </span>
                     {subCat.subSubNav && (
                       <span className="group-hover/subcategory:rotate-90 duration-300">
                         <FontAwesomeIcon icon={faAngleRight} />
@@ -58,15 +63,17 @@ const Categories = () => {
                     )}
                   </div>
                   {/* sub Sub Category */}
-                  <div className="hidden duration-300 group-hover/subcategory:flex w-2/3 lg:w-full absolute group-hover/subcategory:flex-col left-1/2 rounded-md lg:left-full z-30 top-0.5  group-hover/subcategory:bg-white shadow-md animate-fadeInUp ">
+                  <div className="hidden drop-shadow-lg duration-300 group-hover/subcategory:flex w-[80%] lg:w-full absolute group-hover/subcategory:flex-col left-1/2 rounded-md lg:left-full z-30 top-1  group-hover/subcategory:bg-white shadow-lg animate-fadeInUp ">
                     {subCat.subSubNav?.map((subSubCat, idx) => (
                       <Link
                         key={idx}
                         href={subSubCat.href}
-                        className="hover:bg-[#d3dae8] hover:font-semibold px-3 py-1"
+                        className="group/subsubcategory hover:bg-[#d3dae8] rounded-md hover:font-semibold px-4 py-1"
                       >
                         <div className=" flex justify-between">
-                          <span>{subSubCat.label}</span>
+                          <span className="text-sm group-hover/subsubcategory:translate-x-2 duration-200">
+                            {subSubCat.label}
+                          </span>
                           {/* <span className="group-hover/edit:rotate-90 duration-300">
                             <FontAwesomeIcon icon={faAngleRight} />
                           </span> */}

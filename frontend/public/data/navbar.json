@@ -1,6 +1,7 @@
 [
     {
       "label": "Gadgets",
+      "icon": "/icons/gadgets.png",
       "href": "#",
       "subNav": [
         {
@@ -37,6 +38,7 @@
     },
     {
       "label": "Pets Item",
+      "icon": "/icons/pet.png",
       "href": "#",
       "subNav": [
         {"label": "Pet Food", "href": "#", "subSubNav": [
@@ -73,6 +75,7 @@
     },
     {
       "label": "Kitchen Item",
+      "icon": "/icons/kitchen.png",
       "href": "#",
       "subNav": [
         {"label": "Cookware", "href": "#", "subSubNav": [
@@ -109,6 +112,7 @@
     },
     {
       "label": "Electronics",
+      "icon": "/icons/machinery.png",
       "href": "#",
       "subNav": [
         {"label": "Laptops", "href": "#", "subSubNav": [
@@ -145,6 +149,7 @@
     },
     {
       "label": "Phone Accessories",
+      "icon": "/icons/computer.webp",
       "href": "#",
       "subNav": [
         {"label": "Phone Cases", "href": "#", "subSubNav": [
@@ -182,6 +187,7 @@
     },
     {
       "label": "Cloth",
+      "icon": "/icons/womens.png",
       "href": "#",
       "subNav": [
         {"label": "Men's Clothing", "href": "#", "subSubNav": [
