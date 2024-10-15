@@ -1,8 +1,6 @@
 "use client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React from "react";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 
 import { useAppSelector } from "@/lib/features/hooks";

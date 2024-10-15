@@ -1,7 +1,7 @@
 import HeaderContact from "./HeaderContact";
 import HeaderContent from "./HeaderContent";
 import HeaderNavbar from "./HeaderNavbar";
-import Navbar from "../Hero/Categories";
+
 
 const Header = () => {
   return (

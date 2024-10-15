@@ -32,17 +32,17 @@ const Carousel = ({ banners }) => {
   return (
     <div className="relative w-full sm:h-[500px] h-[200px]">
       <div
-        className="absolute inset-0 flex transition-transform duration-700 ease-in-out"
+        className="absolute inset-0 flex transition-transform duration-700 ease-in-out "
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {banners.map((banner, index) => (
-          <div key={index} className="w-full flex-shrink-0">
+          <div key={index} className="w-full flex-shrink-0 md:rounded-lg rounded-none overflow-hidden">
             <Image
               src={banner.src}
               alt={banner.alt}
               width={1200}
               height={600}
-              className="object-contain w-full h-full rounded-lg"
+              className=" w-full h-full md:rounded-lg rounded-none object-cover"
             />
           </div>
         ))}

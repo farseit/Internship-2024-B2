@@ -31,7 +31,6 @@ const HeaderContent = () => {
   const handleLogout = () => {
     Cookies.remove("accessToken");
     setAccessToken(null);
-    // You can also add redirect to the sign-in page or home page after logout
   };
   return (
     <div className="bg-primary text-white w-full h-[57px] md:h-20 grid place-items-center px-3">

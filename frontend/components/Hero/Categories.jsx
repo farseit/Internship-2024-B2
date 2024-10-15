@@ -21,45 +21,51 @@ const Categories = () => {
               className="py-2 text-xs flex duration-500 ease-in-out md:text-sm md:px-1 xl:px-2 text-gray-600 group-hover/nav:text-white justify-between"
             >
               <span>{navItem.label}</span>
-              <span>&#x25B8;</span>
+              {navItem.subNav && navItem.subNav.length > 0 && (
+                <span>&#x25B8;</span> // Show only if there are children
+              )}
             </Link>
             {/* Submenu always on the right */}
-            <div className="absolute z-50 bg-white shadow rounded-lg w-[200px] top-[0%] left-[100%] hidden group-hover/nav:flex flex-col animate-fadeInUp">
-              {navItem.subNav.map((subNavItem, subIndex) => (
-                <span
-                  key={subIndex}
-                  className="relative transition-all rounded text-secondary group/subnav hover:bg-primary hover:text-white"
-                >
-                  <Link
-                    href={subNavItem.href}
-                    className="text-sm px-4 py-1 flex items-center justify-between duration-300 hover:pl-6"
+            {navItem.subNav && (
+              <div className="absolute z-50 bg-white shadow rounded-lg w-[200px] top-[0%] left-[100%] hidden group-hover/nav:flex flex-col animate-fadeInUp">
+                {navItem.subNav.map((subNavItem, subIndex) => (
+                  <span
+                    key={subIndex}
+                    className="relative transition-all rounded text-secondary group/subnav hover:bg-primary hover:text-white"
                   >
-                    <span>{subNavItem.label}</span>
-                    <span>&#x25B8;</span>
-                  </Link>
-                  {/* Sub-submenu always on the right */}
-                  {subNavItem.subSubNav && (
-                    <div className="absolute z-50 bg-white text-secondary shadow-lg rounded-md w-[200px] top-0 left-[100%] hidden group-hover/subnav:flex flex-col animate-fadeInUp">
-                      {subNavItem.subSubNav.map(
-                        (subSubNavItem, subSubIndex) => (
-                          <span
-                            key={subSubIndex}
-                            className="relative transition-all rounded hover:bg-primary hover:text-white"
-                          >
-                            <Link
-                              href={subSubNavItem.href}
-                              className="text-sm px-4 py-1 flex items-center justify-between duration-300 hover:pl-6"
-                            >
-                              <span>{subSubNavItem.label}</span>
-                            </Link>
-                          </span>
-                        )
+                    <Link
+                      href={subNavItem.href}
+                      className="text-sm px-4 py-1 flex items-center justify-between duration-300 hover:pl-6"
+                    >
+                      <span>{subNavItem.label}</span>
+                      {subNavItem.subSubNav && subNavItem.subSubNav.length > 0 && (
+                        <span>&#x25B8;</span>
                       )}
-                    </div>
-                  )}
-                </span>
-              ))}
-            </div>
+                    </Link>
+                    {/* Sub-submenu */}
+                    {subNavItem.subSubNav && (
+                      <div className="absolute z-50 bg-white text-secondary shadow-lg rounded-md w-[200px] top-0 left-[100%] hidden group-hover/subnav:flex flex-col animate-fadeInUp">
+                        {subNavItem.subSubNav.map(
+                          (subSubNavItem, subSubIndex) => (
+                            <span
+                              key={subSubIndex}
+                              className="relative transition-all rounded hover:bg-primary hover:text-white"
+                            >
+                              <Link
+                                href={subSubNavItem.href}
+                                className="text-sm px-4 py-1 flex items-center justify-between duration-300 hover:pl-6"
+                              >
+                                <span>{subSubNavItem.label}</span>
+                              </Link>
+                            </span>
+                          )
+                        )}
+                      </div>
+                    )}
+                  </span>
+                ))}
+              </div>
+            )}
           </span>
         ))}
       </ul>
