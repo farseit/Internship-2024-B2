@@ -1,20 +1,17 @@
 #imageZoom {
-    @apply w-[500px] h-[500px] border
+    @apply w-[100%] h-[400px] border relative
 }
 
 #imageZoom img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     object-position: 0 0;
+    @apply w-full h-full object-cover object-center
 }
 #imageZoom::after{ 
     content: '';
     display: var(--display);
-    width: 100%;
-    height: 100%;
-    background-color: black;
     background-image: var(--url);
-    background-size: 200%;
+    background-size: 250%;
     background-position: var(--zoomX) var(--zoomY);
+    @apply absolute top-0 left-0 h-full w-full bg-primary;
 }
+

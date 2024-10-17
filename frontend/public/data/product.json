@@ -12,6 +12,12 @@
         "id": 2,
         "name": "Wireless Headphones",
         "image": "/img/product/product1.jpg",
+        "images": [
+            {"id": 1, "image": "/img/product/product1.jpg"}, 
+            {"id": 2, "image": "/img/product/product51.jpg"}, 
+            {"id": 3, "image": "/img/product/product33.jpg"}, 
+            {"id": 4, "image": "/img/product/product1.jpg"}        
+        ],
         "category": "Electronics",
         "price": "55000",
         "offer": 10,

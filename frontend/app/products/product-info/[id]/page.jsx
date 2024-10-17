@@ -32,7 +32,11 @@ const ProductInfo = ({ params }) => {
     <div className="bg-white mb-28 lg:mb-6 h-fit">
       <div className="mx-auto max-w-screen-xl px-4 md:px-8 flex flex-col gap-3">
         <div className="grid gap-8 md:grid-cols-2">
-          <ImageGallery image={product.image} productName={product.name} />
+          <ImageGallery
+            image={product.image}
+            productName={product.name}
+            images={product?.images}
+          />
           {/* Details pan */}
           <div className="md:py-8">
             <div className="mb-2 md:mb-3">
