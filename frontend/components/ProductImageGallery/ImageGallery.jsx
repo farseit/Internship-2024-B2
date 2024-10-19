@@ -25,15 +25,15 @@ const ImageGallery = ({ image, productName, images }) => {
   }, []);
 
   const styles = {
-    "--url": `url(${image})`,
+    "--url": `url(${showImage ? showImage.image : image})`,
     "--zoomX": "0%",
     "--zoomY": "0%",
     "--display": "none",
   };
 
   return (
-    <div>
-      <div id="imageZoom" style={styles} className="border-2 border-red-500">
+    <div className="flex md:flex-row-reverse flex-col lg:flex-col gap-5 mt-5">
+      <div id="imageZoom" style={styles}>
         <Image
           src={showImage ? showImage.image : image}
           alt={productName}
@@ -42,9 +42,9 @@ const ImageGallery = ({ image, productName, images }) => {
           className="inline"
         />
       </div>
-      <div className="flex gap-5 mt-4">
+      <div className="flex flex-row md:flex-col lg:flex-row gap-5 mt-4 md:mt-0 lg:mt-4">
         {images?.map((img) => (
-          <div key={img.id}>
+          <div key={img.id} className="flex-1">
             <Image
               onClick={() => setShowImage(img)}
               src={img.image}
