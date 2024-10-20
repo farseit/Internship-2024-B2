@@ -45,7 +45,7 @@ const ProductContainer = () => {
           {products.map((product) => (
             <>
               <SwiperSlide>
-                <Link href="#" key={product.id}>
+                <Link href={`/product-info/${product.id}`} key={product.id}>
                   <ProductCard product={product} />
                 </Link>
               </SwiperSlide>
