@@ -6,7 +6,13 @@
         "category": "Electronics",
         "price": "120000",
         "offer": 15,
-        "discountedPrice": "102000"
+        "discountedPrice": "102000",
+        "images": [
+            {"id": 1, "image": "/img/product/product9.jpg"}, 
+            {"id": 2, "image": "/img/product/product9.jpg"}, 
+            {"id": 3, "image": "/img/product/product9.jpg"}, 
+            {"id": 4, "image": "/img/product/product9.jpg"}        
+        ]
     },
     {
         "id": 2,
@@ -14,8 +20,8 @@
         "image": "/img/product/product1.jpg",
         "images": [
             {"id": 1, "image": "/img/product/product1.jpg"}, 
-            {"id": 2, "image": "/img/product/product51.jpg"}, 
-            {"id": 3, "image": "/img/product/product33.jpg"}, 
+            {"id": 2, "image": "/img/product/product1.jpg"}, 
+            {"id": 3, "image": "/img/product/product1.jpg"}, 
             {"id": 4, "image": "/img/product/product1.jpg"}        
         ],
         "category": "Electronics",
@@ -30,7 +36,14 @@
         "category": "Pets Item",
         "price": "80000",
         "offer": 12,
-        "discountedPrice": "70400"
+        "discountedPrice": "70400",
+        "images": [
+            {"id": 1, "image": "/img/product/product51.jpg"}, 
+            {"id": 2, "image": "/img/product/product51.jpg"}, 
+            {"id": 3, "image": "/img/product/product51.jpg"}, 
+            {"id": 4, "image": "/img/product/product51.jpg"}        
+        ]
+        
     },
     {
         "id": 4,
@@ -39,7 +52,13 @@
         "category": "Kitchen Item",
         "price": "60000",
         "offer": 8,
-        "discountedPrice": "55200"
+        "discountedPrice": "55200",
+        "images": [
+            {"id": 1, "image": "/img/product/product33.jpg"}, 
+            {"id": 2, "image": "/img/product/product33.jpg"}, 
+            {"id": 3, "image": "/img/product/product33.jpg"}, 
+            {"id": 4, "image": "/img/product/product33.jpg"}        
+        ]
     },
     {
         "id": 5,

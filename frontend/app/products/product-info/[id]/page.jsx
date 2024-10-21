@@ -89,7 +89,7 @@ const ProductInfo = ({ params }) => {
               </div>
             </div>
             <div className="flex gap-2.5">
-              <button className="bg-blue-600 px-4 py-2 text-white rounded-md font-semibold hover:bg-[blue]">
+              <button className="bg-[#192a56] px-4 py-2 text-white rounded-md font-semibold hover:bg-[#273c75]">
                 Add To Cart
               </button>
 

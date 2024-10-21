@@ -39,7 +39,7 @@ const ImageGallery = ({ image, productName, images }) => {
           alt={productName}
           height={400}
           width={400}
-          className="inline"
+          s
         />
       </div>
       <div className="flex flex-row md:flex-col lg:flex-row gap-5 mt-4 md:mt-0 lg:mt-4">

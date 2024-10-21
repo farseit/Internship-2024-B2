@@ -1,6 +1,7 @@
 // OAuth.jsx
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebookF } from "react-icons/fa";
 import { GoogleAuthProvider, signInWithPopup, getAuth } from "firebase/auth";
 import { app } from "../firebase";
 import { useDispatch } from "react-redux";
@@ -40,13 +41,23 @@ export default function OAuth() {
   };
 
   return (
-    <button
-      type="button"
-      className="flex items-center p-2 bg-green-500 text-white rounded-md"
-      onClick={handleGoogleClick}
-    >
-      <FontAwesomeIcon icon={faGoogle} className="w-6 h-6 mr-2" />
-      Continue with Google
-    </button>
+    <div className="flex gap-4 justify-between items-center">
+      <button
+        type="button"
+        className="flex items-center p-2 rounded-md"
+        onClick={handleGoogleClick}
+      >
+        <FcGoogle className="w-6 h-6 mr-2" />
+        Sign up with Google
+      </button>
+      <button
+        type="button"
+        className="flex items-center p-2 rounded-md"
+        onClick={handleGoogleClick}
+      >
+        <FaFacebookF className="text-xl mr-2 text-sky-600" />
+        Sign up with Google
+      </button>
+    </div>
   );
 }
