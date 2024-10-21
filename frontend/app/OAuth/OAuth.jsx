@@ -44,7 +44,7 @@ export default function OAuth() {
     <div className="flex gap-4 justify-between items-center">
       <button
         type="button"
-        className="flex items-center p-2 rounded-md"
+        className="flex items-center p-2 rounded-md bg-[#F9F9F9]"
         onClick={handleGoogleClick}
       >
         <FcGoogle className="w-6 h-6 mr-2" />
@@ -52,7 +52,7 @@ export default function OAuth() {
       </button>
       <button
         type="button"
-        className="flex items-center p-2 rounded-md"
+        className="flex items-center p-2 rounded-md bg-[#F9F9F9]"
         onClick={handleGoogleClick}
       >
         <FaFacebookF className="text-xl mr-2 text-sky-600" />
