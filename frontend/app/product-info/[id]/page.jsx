@@ -17,7 +17,7 @@ import { useState } from "react";
 import { Rate } from "antd";
 
 export default function ProductPage() {
-  //dummy data 
+  //dummy data
   const images = [
     { id: 1, src: "/img/Product/watch/watch1.jpg" },
     { id: 2, src: "/img/Product/watch/watch2.jpg" },
@@ -42,7 +42,7 @@ export default function ProductPage() {
   const [showMagnifier, setShowMagnifier] = useState(false);
   const [[x, y], setXY] = useState([0, 0]);
 
-  //daynamic id
+  //daynamic id will use for axios http reqh
   const params = useParams();
   const { id } = params;
 
@@ -78,7 +78,7 @@ export default function ProductPage() {
             />
             {showMagnifier && (
               <div
-                className="absolute lg:block hidden pointer-events-none border border-gray-200 bg-white rounded-full"
+                className="absolute lg:block hidden pointer-events-none border border-[#192a56] bg-white rounded-full"
                 style={{
                   height: `${magnifierHeight}px`,
                   width: `${magnifieWidth}px`,
@@ -111,9 +111,13 @@ export default function ProductPage() {
                 alt={`Product ${index + 1}`}
                 width={400}
                 height={400}
-                className={`rounded-lg object-cover w-[22%] min-h-[100px] max-h-[100px] bg-white border-2 hover:border-2  border-gray-400/20 hover:border-yellow-400 ${
+                className={`rounded-lg object-cover w-[22%] min-h-[100px] max-h-[100px] bg-white border-2 hover:border-2  border-gray-400/20 ${
+                  selectedImage ===image.src
+                    ? "disabled"
+                    : "hover:border-yellow-400"
+                } ${
                   selectedImage === image.src
-                    ? "border-yellow-400 border-2 "
+                    ? "border-[#192a56] border-2 "
                     : "border-gray-400/20"
                 }`}
               />
@@ -195,7 +199,6 @@ export default function ProductPage() {
             <div className="flex gap-8">
               {icons.map((icon, index) => {
                 return (
-                  
                   <Link href={"/"}>
                     <Image src={icon.src} alt="alt" width={20} height={20} />
                   </Link>
