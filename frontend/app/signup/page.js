@@ -317,6 +317,7 @@ import Link from "next/link";
 import OAuth from "../OAuth/OAuth";
 import { FiEyeOff } from "react-icons/fi";
 import { Divider } from "@mui/material";
+import Image from "next/image";
 
 const Signup = () => {
   const [emailError, setEmailError] = useState("");
@@ -473,99 +474,128 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
-      <div className="bg-white shadow-md rounded-lg p-8  ">
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
-          Create Your Account
-        </h2>
-        <div className="mb-2">
-          <OAuth />
+    <section className="grid lg:grid-cols-2 max-h-screen">
+      <div className="relative hidden md:block order-2">
+        <Image
+          src="/img/signin.png"
+          width={600}
+          height={800}
+          alt="signin image"
+          className="w-full blur-md max-h-screen object-cover object-top"
+        />
+        <div className="absolute w-[445px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+          <div className="text-center">
+            <h3 className="text-xl font-bold text-white">
+              Sign Up for batter experience
+            </h3>
+            <Link
+              href={"/signup"}
+              className="block border-2 active:scale-95 hover:border-[#2FB261] hover:text-[#2FB261] border-white text-white text-xl uppercase px-4 py-2 w-full rounded-[10px]  transition duration-300 mt-6"
+            >
+              Sign Up
+            </Link>
+          </div>
         </div>
-        <Divider className="mb-6">OR</Divider>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              placeholder="Enter your name"
-              onChange={handleChange}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            />
-            {formErrors.name && (
-              <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
-            )}
-          </div>
-          <div>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            />
-            {formErrors.email && (
-              <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
-            )}
-          </div>
-
-          <div>
-            <div className="relative">
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
-                className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-              />
-              <div className="absolute opacity-50 right-3 top-1/2 -translate-y-1/2 ">
-                <FiEyeOff className="text-xl" />
-              </div>
-            </div>
-            {formErrors.password && (
-              <p className="text-red-500 text-sm mt-1">{formErrors.password}</p>
-            )}
-          </div>
-          <div>
-            <div className="relative">
-              <input
-                type="password"
-                name="confirm_password"
-                value={formData.confirm_password}
-                onChange={handleChange}
-                placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
-                className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-              />
-              <div className="absolute opacity-50 right-3 top-1/2 -translate-y-1/2 ">
-                <FiEyeOff className="text-xl" />
-              </div>
-            </div>
-            {formErrors.confirm_password && (
-              <p className="text-red-500 text-sm mt-1">
-                {formErrors.confirm_password}
-              </p>
-            )}
-          </div>
-
-          <button
-            type="submit"
-            className=" bg-[#2FB261] hover:bg-[#248b4c] text-white text-xl uppercase px-4 py-2 w-full rounded-[10px]  transition duration-300 mt-6"
-            disabled={loading}
-          >
-            {loading ? "Signing Up..." : "Sign Up"}
-          </button>
-          {error && <p className="text-red-500 text-center mt-4">{error}</p>}
-        </form>
-        <Link href="/signin">
-          <h6 className="text-center mt-3 font-bold text-xl">
-            Already have an account?{" "}
-            <span className=" text-[#2FB261]">Sign In</span>
-          </h6>
-        </Link>
       </div>
-    </div>
+      <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
+        <div className="bg-white shadow-md rounded-lg p-8  ">
+          <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
+            Create Your Account
+          </h2>
+          <span className="block text-[#9F9F9F] text-xl text-center mb-6">
+            Please enter your details
+          </span>
+          <div className="mb-2">
+            <OAuth />
+          </div>
+          <Divider className="mb-6">OR</Divider>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                placeholder="Enter your name"
+                onChange={handleChange}
+                className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+              />
+              {formErrors.name && (
+                <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>
+              )}
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+              />
+              {formErrors.email && (
+                <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
+              )}
+            </div>
+
+            <div>
+              <div className="relative">
+                <input
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                />
+                <div className="absolute opacity-50 right-3 top-1/2 -translate-y-1/2 ">
+                  <FiEyeOff className="text-xl" />
+                </div>
+              </div>
+              {formErrors.password && (
+                <p className="text-red-500 text-sm mt-1">
+                  {formErrors.password}
+                </p>
+              )}
+            </div>
+            <div>
+              <div className="relative">
+                <input
+                  type="password"
+                  name="confirm_password"
+                  value={formData.confirm_password}
+                  onChange={handleChange}
+                  placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                />
+                <div className="absolute opacity-50 right-3 top-1/2 -translate-y-1/2 ">
+                  <FiEyeOff className="text-xl" />
+                </div>
+              </div>
+              {formErrors.confirm_password && (
+                <p className="text-red-500 text-sm mt-1">
+                  {formErrors.confirm_password}
+                </p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className=" active:scale-95 bg-[#2FB261] hover:bg-[#248b4c] text-white text-xl uppercase px-4 py-2 w-full rounded-[10px]  transition duration-300 mt-6"
+              disabled={loading}
+            >
+              {loading ? "Signing Up..." : "Sign Up"}
+            </button>
+            {error && <p className="text-red-500 text-center mt-4">{error}</p>}
+          </form>
+          <Link href="/signin">
+            <h6 className="text-center mt-3 font-bold text-xl">
+              Already have an account?{" "}
+              <span className=" text-[#2FB261]">Sign In</span>
+            </h6>
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 };
 

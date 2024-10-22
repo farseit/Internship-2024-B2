@@ -121,7 +121,7 @@ const SignIn = () => {
 
   return (
     <section className="grid lg:grid-cols-2 max-h-screen">
-      <div className="hidden md:block">
+      <div className="relative hidden md:block">
         <Image
           src="/img/signin.png"
           width={600}
@@ -129,6 +129,19 @@ const SignIn = () => {
           alt="signin image"
           className="w-full blur-md max-h-screen object-cover object-top"
         />
+        <div className="absolute w-[445px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+          <div className="text-center">
+            <h3 className="text-xl font-bold text-white">
+              Sign Up for batter experience
+            </h3>
+            <Link
+              href={"/signup"}
+              className="block border-2 active:scale-95 hover:border-[#2FB261] hover:text-[#2FB261] border-white text-white text-xl uppercase px-4 py-2 w-full rounded-[10px]  transition duration-300 mt-6"
+            >
+              Sign Up
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="flex justify-center items-start">
         <div className="bg-white p-8 rounded shadow-md">
@@ -210,7 +223,7 @@ const SignIn = () => {
             </div>
             <button
               type="submit"
-              className=" bg-[#2FB261] hover:bg-[#248b4c] text-white text-xl uppercase px-4 py-2 w-full rounded-[10px]  transition duration-300 mt-6"
+              className=" active:scale-95 bg-[#2FB261] hover:bg-[#248b4c] text-white text-xl uppercase px-4 py-2 w-full rounded-[10px]  transition duration-300 mt-6"
             >
               Sign in
             </button>
