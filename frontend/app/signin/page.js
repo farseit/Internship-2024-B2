@@ -38,6 +38,7 @@ const SignIn = () => {
   });
 
   const handleChange = (e) => {
+    console.log(e.target.name);
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -70,20 +71,20 @@ const SignIn = () => {
     }
 
     try {
-      dispatch(SignInStart());
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_ENDPOINT}/auth/login`,
-        {
-          username: formData.email,
-          password: formData.password,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          withCredentials: true,
-        }
-      );
+      // dispatch(SignInStart());
+      // const response = await axios.post(
+      //   `${process.env.NEXT_PUBLIC_API_ENDPOINT}/auth/login`,
+      //   {
+      //     username: formData.email,
+      //     password: formData.password,
+      //   },
+      //   {
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //     withCredentials: true,
+      //   }
+      // );
 
       const data = response.data;
       const accessToken = data.accessToken;
@@ -126,10 +127,10 @@ const SignIn = () => {
           width={600}
           height={800}
           alt="signin image"
-          className="w-full "
+          className="w-full blur-md max-h-screen object-cover object-top"
         />
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-start">
         <div className="bg-white p-8 rounded shadow-md">
           <h2 className="text-2xl font-bold mb-6 text-center">
             Sing In Your Account

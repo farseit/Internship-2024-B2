@@ -314,6 +314,9 @@ import {
 } from "@/lib/features/user/userSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/features/hooks";
 import Link from "next/link";
+import OAuth from "../OAuth/OAuth";
+import { FiEyeOff } from "react-icons/fi";
+import { Divider } from "@mui/material";
 
 const Signup = () => {
   const [emailError, setEmailError] = useState("");
@@ -327,6 +330,7 @@ const Signup = () => {
     address: "",
     phone: "",
     password: "",
+    confirm_password: "",
     role: "",
     registration_date: "",
     Image: "",
@@ -338,6 +342,7 @@ const Signup = () => {
     address: "",
     phone: "",
     password: "",
+    confirm_password: "",
     role: "",
     registration_date: "",
     Image: "",
@@ -423,6 +428,9 @@ const Signup = () => {
       newFormErrors.registration_date = "Registration date is required";
       isValid = false;
     }
+    if (formData.confirm_password.trim() === "") {
+      newFormErrors.confirm_password = "Confirm Password is required";
+    }
 
     if (isValid) {
       dispatch(RegisterStart());
@@ -432,12 +440,8 @@ const Signup = () => {
           {
             name: formData.name,
             email: formData.email,
-            address: formData.address,
-            phone: formData.phone,
             password: formData.password,
-            role: formData.role,
-            registration_date: formData.registration_date,
-            Image: formData.Image,
+            confirm_password: formData.confirm_password,
           },
           {
             headers: {
@@ -470,17 +474,21 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
-      <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+      <div className="bg-white shadow-md rounded-lg p-8  ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
-          Sign Up
+          Create Your Account
         </h2>
+        <div className="mb-2">
+          <OAuth />
+        </div>
+        <Divider className="mb-6">OR</Divider>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-gray-700">Name:</label>
             <input
               type="text"
               name="name"
               value={formData.name}
+              placeholder="Enter your name"
               onChange={handleChange}
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
             />
@@ -489,111 +497,71 @@ const Signup = () => {
             )}
           </div>
           <div>
-            <label className="block text-gray-700">Email:</label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
+              placeholder="Enter your email"
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
             />
             {formErrors.email && (
               <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
             )}
           </div>
+
           <div>
-            <label className="block text-gray-700">Address:</label>
-            <input
-              type="text"
-              name="address"
-              value={formData.address}
-              onChange={handleChange}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            />
-            {formErrors.address && (
-              <p className="text-red-500 text-sm mt-1">{formErrors.address}</p>
-            )}
-          </div>
-          <div>
-            <label className="block text-gray-700">Phone:</label>
-            <input
-              type="text"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            />
-            {formErrors.phone && (
-              <p className="text-red-500 text-sm mt-1">{formErrors.phone}</p>
-            )}
-          </div>
-          <div>
-            <label className="block text-gray-700">Password:</label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            />
+            <div className="relative">
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+              />
+              <div className="absolute opacity-50 right-3 top-1/2 -translate-y-1/2 ">
+                <FiEyeOff className="text-xl" />
+              </div>
+            </div>
             {formErrors.password && (
               <p className="text-red-500 text-sm mt-1">{formErrors.password}</p>
             )}
           </div>
           <div>
-            <label className="block text-gray-700">Role:</label>
-            <input
-              type="text"
-              name="role"
-              value={formData.role}
-              onChange={handleChange}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            />
-            {formErrors.role && (
-              <p className="text-red-500 text-sm mt-1">{formErrors.role}</p>
-            )}
-          </div>
-          <div>
-            <label className="block text-gray-700">Registration Date:</label>
-            <input
-              type="date"
-              name="registration_date"
-              value={formData.registration_date}
-              onChange={handleChange}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            />
-            {formErrors.registration_date && (
+            <div className="relative">
+              <input
+                type="password"
+                name="confirm_password"
+                value={formData.confirm_password}
+                onChange={handleChange}
+                placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+              />
+              <div className="absolute opacity-50 right-3 top-1/2 -translate-y-1/2 ">
+                <FiEyeOff className="text-xl" />
+              </div>
+            </div>
+            {formErrors.confirm_password && (
               <p className="text-red-500 text-sm mt-1">
-                {formErrors.registration_date}
+                {formErrors.confirm_password}
               </p>
             )}
           </div>
-          <div>
-            <label className="block text-gray-700">Image URL:</label>
-            <input
-              type="text"
-              name="Image"
-              value={formData.Image}
-              onChange={handleChange}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-            />
-            {formErrors.Image && (
-              <p className="text-red-500 text-sm mt-1">{formErrors.Image}</p>
-            )}
-          </div>
+
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200"
+            className=" bg-[#2FB261] hover:bg-[#248b4c] text-white text-xl uppercase px-4 py-2 w-full rounded-[10px]  transition duration-300 mt-6"
             disabled={loading}
           >
             {loading ? "Signing Up..." : "Sign Up"}
           </button>
           {error && <p className="text-red-500 text-center mt-4">{error}</p>}
         </form>
-        <Link href="/sigin">
-          <h6 className="text-[#006266] text-center mt-3 ">
+        <Link href="/signin">
+          <h6 className="text-center mt-3 font-bold text-xl">
             Already have an account?{" "}
-            <span className="font-semibold">Signin here.</span>
+            <span className=" text-[#2FB261]">Sign In</span>
           </h6>
         </Link>
       </div>
