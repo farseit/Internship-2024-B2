@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="lg:col-span-3  hidden lg:block">
           <Categories />
         </div>
-        <div class="col-span-10 lg:col-span-7 ">
+        <div className="col-span-10 lg:col-span-7 ">
           <div>
             <Swiper
               style={{
@@ -118,7 +118,7 @@ const Hero = () => {
             >
               {products?.map((product) => (
                 <SwiperSlide>
-                  <div class="rounded-md">
+                  <div className="rounded-md">
                     <Image
                       src={product.image}
                       width={800}

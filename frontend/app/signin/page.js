@@ -17,6 +17,7 @@ import Cookies from "js-cookie";
 import Checkbox from "@mui/material/Checkbox";
 import Divider from "@mui/material/Divider";
 import Image from "next/image";
+import { FiEye } from "react-icons/fi";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -27,6 +28,7 @@ const SignIn = () => {
   const [generalError, setGeneralError] = useState("");
   const router = useRouter();
   const dispatch = useDispatch();
+  const [showPass, setShowPass] = useState(false);
   const { loading, error: errorMessage } = useSelector((state) => state.user);
   const [formData, setFormData] = useState({
     email: "",
@@ -38,7 +40,6 @@ const SignIn = () => {
   });
 
   const handleChange = (e) => {
-    console.log(e.target.name);
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -85,6 +86,20 @@ const SignIn = () => {
       //     withCredentials: true,
       //   }
       // );
+
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_ENDPOINT}/auth/signin`,
+        {
+          username: formData.email,
+          password: formData.password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
 
       const data = response.data;
       const accessToken = data.accessToken;
@@ -154,7 +169,11 @@ const SignIn = () => {
           <div className="mb-2">
             <OAuth />
           </div>
-          <Divider className="mb-6">OR</Divider>
+          <div className="border-b mt-6 mb-8 relative border-black">
+            <Divider className=" -mt-3 bg-white absolute left-1/2 -translate-x-1/2 ">
+              OR
+            </Divider>
+          </div>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <input
@@ -175,7 +194,7 @@ const SignIn = () => {
             <div>
               <div className="relative">
                 <input
-                  type="password"
+                  type={showPass ? "text" : "password"}
                   id="password"
                   name="password"
                   placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
@@ -185,7 +204,16 @@ const SignIn = () => {
                     formErrors.password ? "border-red-500" : "border-[#E8E8F2]"
                   }`}
                 />
-                <FiEyeOff className="absolute opacity-50 right-3 top-1/2 -translate-y-1/2 text-xl" />
+                <button
+                  onClick={() => setShowPass(!showPass)}
+                  className="absolute opacity-50 right-3 top-1/2 -translate-y-1/2 "
+                >
+                  {showPass || formData.password === "" ? (
+                    <FiEyeOff className="text-xl" />
+                  ) : (
+                    <FiEye className="text-xl" />
+                  )}
+                </button>
               </div>
 
               {formErrors.password && (
