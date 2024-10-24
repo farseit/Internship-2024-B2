@@ -8,3 +8,8 @@
     height: 40px !important;
     @apply rounded-full
 } */
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #ffffff;
+    color:white
+}
