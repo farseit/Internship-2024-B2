@@ -9,6 +9,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import Link from "next/link";
+import { Divider } from "@mui/material";
 
 const Footer = () => {
   const handleSubmit = (e) => {
@@ -18,10 +19,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#181818] text-[#838790] p-6 md:p-12 lg:p-24 pb-24 md:pb-0">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <footer className="bg-[#181818] text-[#838790] p-6 md:p-12 lg:p-24 pb-24 md:pb-28 lg:pb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {/* part-1 */}
-        <div className="space-y-4">
+        <div className="space-y-4 col-span-1">
           <Image
             src="/img/logo.png"
             height={65}
@@ -72,7 +73,7 @@ const Footer = () => {
           </div>
         </div>
         {/* part-2 */}
-        <div className="space-y-4">
+        <div className="space-y-4 col-span-1">
           <h2 className="text-white text-2xl font-bold">NEWSLETTER</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -102,7 +103,53 @@ const Footer = () => {
           />
         </div>
         {/* Part-3 */}
-        <div>part-3</div>
+        <div className="col-span-1 md:col-span-2  lg:col-span-1 grid gird-cols-1 md:grid-cols-2 gap-10">
+          <div className="space-y-4">
+            <h2 className="text-white text-2xl font-bold">LINKS</h2>
+            <div className="flex flex-col gap-2">
+              <Link href={"/"} className="text-base hover:underline">
+                Home
+              </Link>
+              <Link href={"/about-us"} className="text-base hover:underline">
+                About Us
+              </Link>
+              <Link href={"/shop"} className="text-base hover:underline">
+                Shop
+              </Link>
+              <Link href={"/blog"} className="text-base hover:underline">
+                Blog
+              </Link>
+              <Link href={"/contact-us"} className="text-base hover:underline">
+                Contact Us
+              </Link>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <h2 className="text-white text-2xl font-bold ">Help/Support</h2>
+            <div className="flex flex-col gap-2">
+              <Link href={"/"} className="text-base hover:underline ">
+                FAQ
+              </Link>
+              <Link href={"/"} className="text-base hover:underline inline">
+                Shipping Info
+              </Link>
+              <Link href={"/"} className="text-base hover:underline inline">
+                Returns
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="my-6">
+        <Divider style={{ borderColor: "#838790" }} />
+      </div>
+      <div className="flex flex-col md:flex-row gap-4 justify-between">
+        <span className="text-white">2024 - Design & Copyright By Trendy </span>
+        <div className="flex flex-col md:flex-row gap-5">
+          <span className="text-base hover:underline">Privacy Policy</span>
+          <span className="text-base hover:underline">Terms of Service</span>
+          <span className="text-base hover:underline">Cookies Policy</span>
+        </div>
       </div>
     </footer>
   );
