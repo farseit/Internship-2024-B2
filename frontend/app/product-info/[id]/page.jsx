@@ -32,6 +32,7 @@ export default function ProductPage() {
   ];
 
   const [selectedImage, setSelectedImage] = useState(images[0].src); // Default to the last image
+  const [count, setCount] = useState(0);
 
   //magnifying prop
   const magnifierHeight = 300;
@@ -45,6 +46,16 @@ export default function ProductPage() {
   //daynamic id will use for axios http reqh
   const params = useParams();
   const { id } = params;
+
+  const handleIncrement = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const handleDecrement = () => {
+    if (count > 0) {
+      setCount((prevCount) => prevCount - 1);
+    }
+  };
 
   return (
     <div className=" flex items-center justify-center lg:h-[800px] mb-20 mx-auto container">
@@ -112,7 +123,7 @@ export default function ProductPage() {
                 width={400}
                 height={400}
                 className={`rounded-lg object-cover w-[22%] min-h-[100px] max-h-[100px] bg-white border-2 hover:border-2  border-gray-400/20 ${
-                  selectedImage ===image.src
+                  selectedImage === image.src
                     ? "disabled"
                     : "hover:border-yellow-400"
                 } ${
@@ -133,6 +144,7 @@ export default function ProductPage() {
           </div>
           <div className="flex justify-between lg:items-center">
             <div>
+              {/* {Review read only from antd} */}
               <Rate disabled defaultValue={4} />
               <div className="flex gap-2 items-center">
                 <span className="text-xs">3 Reviews</span>
@@ -176,9 +188,19 @@ export default function ProductPage() {
               <option>Gray</option>
             </select>
             <div className="mt-1 shadow-sm flex items-center gap-10 font-semibold bg-white text-xs md:text-base rounded-full">
-              <button className=" px-3 py-1 border-r text-lg">-</button>
-              <span>0</span>
-              <button className=" px-3 py-1 border-l text-lg">+</button>
+              <button
+                className=" px-3 py-1 border-r text-lg"
+                onClick={handleDecrement}
+              >
+                -
+              </button>
+              <span>{count}</span>
+              <button
+                className=" px-3 py-1 border-l text-lg"
+                onClick={handleIncrement}
+              >
+                +
+              </button>
             </div>
           </div>
           <div className="flex gap-8">

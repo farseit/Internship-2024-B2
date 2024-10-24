@@ -13,8 +13,9 @@ const SignUp = () => {
     name: "",
     email: "",
     password: "",
-    retypePassword: "",
   });
+  console.log(formData);
+  const [retypePassword, setRetypePassword] = useState("");
   const [errors, setErrors] = useState({
     name: "",
     email: "",
@@ -32,12 +33,15 @@ const SignUp = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" });
+    setErrors({
+      ...errors,
+      [e.target.name]: "",
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, password, retypePassword } = formData;
+    const { name, email, password } = formData;
     let newErrors = {
       name: "",
       email: "",
@@ -62,12 +66,28 @@ const SignUp = () => {
       return;
     }
 
+    // Dummy data
+    const defaultPicture = "/img/default.png";
+    const address = "123 Dummy Street";
+    const phone = "0000000000";
+    const role = "user";
+
+    // Creating form data
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("password", formData.password);
+    formDataToSend.append("defaultPicture", defaultPicture);
+    formDataToSend.append("address", address);
+    formDataToSend.append("phone", phone);
+    formDataToSend.append("role", role);
+
     try {
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_ENDPOINT}/auth/signup`,
-        { name, email, password },
+        formDataToSend,
         {
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "multipart/form-data" },
         }
       );
 
@@ -167,8 +187,14 @@ const SignUp = () => {
               <input
                 type={passwordVisibility.retypePassword ? "text" : "password"}
                 name="retypePassword"
-                value={formData.retypePassword}
-                onChange={handleChange}
+                value={retypePassword}
+                onChange={(e) => {
+                  setRetypePassword(e.target.value);
+                  setErrors({
+                    ...errors,
+                    [e.target.name]: "",
+                  });
+                }}
                 placeholder="Enter your Retype password"
                 className="border h-[55px] rounded-[10px] w-full px-4 text-[16px] pr-12"
                 id="retypePassword"
@@ -222,21 +248,21 @@ const SignUp = () => {
               alt="alt"
               width={30}
               height={30}
-              className="w-[45px] h-[46px]"
+              className="md:w-[45px] md:h-[46px]"
             />
             <Image
               src="/img/icons/social/_email.png"
               alt="alt"
               width={30}
               height={30}
-              className="w-[50px] h-[37.45px]"
+              className="md:w-[50px] md:h-[37.45px]"
             />
             <Image
               src="/img/icons/social/_facebook.png"
               alt="alt"
               width={30}
               height={30}
-              className="w-[60px] h-[60px]"
+              className="md:w-[60px] md:h-[60px]"
             />
           </div>
           <div className="w-full flex justify-center">

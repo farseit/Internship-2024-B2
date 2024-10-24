@@ -37,11 +37,9 @@ const SignIn = () => {
           withCredentials: true,
         }
       );
-
-      // Handle success (e.g., redirect or show success message)
-      console.log(response.data);
+      //navigate [will add later]
     } catch (error) {
-      // Handle error (e.g., show error message)
+      // Handle error 
       console.error(error);
       setErrors({
         ...errors,
@@ -169,7 +167,7 @@ const SignIn = () => {
                 alt="alt"
                 width={30}
                 height={30}
-                className="min-w-[45px] min-h-[46px]"
+                className="md:w-[45px] md:h-[46px]"
               />
             </button>
             <button>
@@ -178,7 +176,7 @@ const SignIn = () => {
                 alt="alt"
                 width={30}
                 height={30}
-                className="min-w-[50px] min-h-[37.45px]"
+                className="md:w-[50px] md:h-[37.45px]"
               />
             </button>
             <button>
@@ -187,7 +185,7 @@ const SignIn = () => {
                 alt="alt"
                 width={30}
                 height={30}
-                className="min-w-[60px] min-h-[60px]"
+                className="md:w-[60px] md:h-[60px]"
               />
             </button>
           </div>
