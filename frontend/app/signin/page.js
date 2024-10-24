@@ -142,9 +142,9 @@ const SignIn = () => {
           width={600}
           height={800}
           alt="signin image"
-          className="w-full blur-md max-h-screen object-cover object-top"
+          className="w-full  max-h-screen object-cover object-top"
         />
-        <div className="absolute w-[445px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+        <div className="absolute  md:w-[445px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
           <div className="text-center">
             <h3 className="text-xl font-bold text-white">
               Sign Up for batter experience
@@ -158,7 +158,7 @@ const SignIn = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-start">
+      <div className="flex justify-center items-start mt-5">
         <div className="bg-white p-8 rounded shadow-md">
           <h2 className="text-2xl font-bold mb-6 text-center">
             Sing In Your Account

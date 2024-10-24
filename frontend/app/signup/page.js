@@ -181,7 +181,7 @@ const Signup = () => {
           width={600}
           height={800}
           alt="signin image"
-          className="w-full blur-md max-h-screen object-cover object-top"
+          className="w-full  max-h-screen object-cover object-top"
         />
         <div className="absolute w-[445px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
           <div className="text-center">
